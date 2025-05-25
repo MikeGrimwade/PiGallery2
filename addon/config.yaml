@@ -1,8 +1,8 @@
-name: Worthing Bin Day Scraper
+name: PiGallery2
 version: "1.0.0"
-slug: worthing_bin_day_scraper
-description: Scrapes bin collection dates for a given UPRN
-url: https://github.com/MikeGrimwade/WorthingBinDayScraper
+slug: pigallery2
+description: Photo gallery and slideshow server
+url: https://github.com/bpatrik/pigallery2
 
 arch:
   - amd64
@@ -10,16 +10,17 @@ arch:
   - armv7
 init: false
 startup: services
+boot: auto
 apparmor: true
-ingress: false
+ingress: true
+panel_icon: mdi:image-album
+panel_title: PiGallery2
+ingress_port: 1978
 
 # Host network access is required 
 host_network: true
 ports:
-  5000/tcp: 5000
+  1978/tcp: 1978
 
-options:
-  uprn: "100061905781"
-schema:
-  uprn: "str"
-  
+map:
+  - media:ro 
