@@ -5,4 +5,4 @@ mkdir -p /data/config
 cd /app
 
 # Start the app
-serve -s dist -l 80
+serve -s dist -l 1978
